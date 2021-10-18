@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 6fr 3fr 2fr;
+    grid-template-areas: 
+    'header-content  header-content  nav'
+    'header-content  header-content  candy'
+    'nom             yum             candy'
+    'header-footer   header-footer   candy'
+    ;
+}
+
+.header-content{
+    grid-area: header-content;
+    background: #FFFADF;
+    padding: 2rem 4rem;
+}
+
+.brand{
+    color: #ca415a;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.heading{
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.header-content p{
+    margin-bottom: 1rem;
+}
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.link-shop{
+    color: #ca415a;
+}
+
+.fa-bars{
+    font-size: 1.5rem;
+    transition: all ease-in-out .3s;
+}
+
+.fa-bars:hover{
+    cursor: pointer;
+    color: #ca415a;
+}
+
+.candy{
+    grid-area: candy;
+    background: url('candy.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+
+.nom{
+    grid-area: nom;
+    background: #C4B35A;
+    font-size: 1.2rem;
+}
+
+.yum{
+    grid-area: yum;
+    background: #333333;
+    font-size: 1.2rem;
+}
+
+.nom-text, .yum-text{
+    position: relative;
+}
+
+.nom, .yum{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nom-text::after, .nom-text::before, .yum-text::after, .yum-text::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background: white;
+}
+
+.nom-text::before, .yum-text::before{
+    top: 50%;
+    right: 120px;
+}
+
+.nom-text::after, .yum-text::after{
+    top: 50%;
+    left: 120px;
+}
+
+.header-footer{
+    grid-area: header-footer;
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(177, 173, 173);
+    font-size: 1.3rem;
+}
